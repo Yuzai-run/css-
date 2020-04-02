@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>三栏布局</title>
+		<style type="text/css">
+			.header{
+				background: #ccc;
+    			text-align: center;
+			}
+			.left, .right, .main{
+				min-height: 100px;
+				float: left;
+			}
+			.container{
+				padding: 0 300px 0 200px;
+			}
+			.left{
+				background: red;
+				width: 200px;
+				margin-left: -100%;
+				position: relative;
+				left: -200px;
+			}
+			.right{
+				background: blue;
+				width: 300px;
+				margin-left: -300px;
+				position: relative;
+				left: 300px;
+			}
+			.main{
+				width: 100%;
+				background: yellow;
+			}
+			.footer{
+				background: #ccc;
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header">圣杯布局</header>
+		<div class="container">
+			<div class="main">
+				main
+			</div>
+			<div class="left">
+				left
+			</div>
+			<div class="right">
+				right
+			</div>
+		</div>
+		<footer class="footer">
+			<p>1.整个容器中，左侧和右侧空出相应的padding放置两侧定宽内容</p>
+			<p>2.三列设置浮动float为left,footer清除浮动</p>
+			<p>3.设置中间列的width为100%，让其撑满一列，会把左右两列挤下去</p>
+			<p>4.关键的一步，给左侧列设置负的margin-left:-100%，右侧列设置margin-left：它的-width；让其放回到上一列</p>
+			<p>5.用相对定位定位到预留的位置</p>
+		</footer>
+		
+	</body>
+</html>

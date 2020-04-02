@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.header{
+				background: #ccc;
+    			text-align: center;
+			}
+			.left, .right, .main{
+				min-height: 100px;
+			}
+			.container{
+				display: flex;
+			}
+			.left{
+				background: red;
+				width: 200px;
+			}
+			.right{
+				background: blue;
+				width: 300px;
+			}
+			.main{
+				width: 100%;
+				background: yellow;
+				flex: 1;
+			}
+			.footer{
+				background: #ccc;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="header">flex布局</header>
+		<div class="container">
+			<div class="left">
+				left
+			</div>
+			<div class="main">
+				main
+			</div>
+			<div class="right">
+				right
+			</div>
+		</div>
+		<footer class="footer">
+			
+		</footer>
+		
+	</body>
+</html>
